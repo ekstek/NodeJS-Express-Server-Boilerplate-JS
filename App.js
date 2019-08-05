@@ -7,6 +7,7 @@ const logger = require('morgan');
 const HOST = 'localhost';
 
 const Test = require("./Routes/route");
+
 app.use(logger("dev"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
