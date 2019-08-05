@@ -1,1 +1,1 @@
-# NodeJS-Express-Server-Boilerplate-JSS
+# NodeJS-Express-Server-Boilerplate-JS
