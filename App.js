@@ -1,6 +1,11 @@
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
+const PORT = require('./Util/port').PORT;
+const LOGGER = require('./Util/logger');
+const logger = require('morgan');
+const HOST = 'localhost';
+
 const Test = require("./Routes/route");
 app.use(logger("dev"));
 app.use(bodyParser.json());
@@ -42,3 +47,7 @@ app.use((error, req, res, next) => {
   });
 });
 ///////////////////////////////////
+app.listen(PORT , (error) => {
+    if(error) return LOGGER.error(error.meesage);
+    LOGGER.appStarted(PORT ,HOST);
+})
